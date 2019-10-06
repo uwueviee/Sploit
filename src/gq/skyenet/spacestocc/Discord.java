@@ -9,10 +9,20 @@ import club.minnced.discord.rpc.DiscordRichPresence;
  *
  * @author Skye Viau (PretzelCA) {@literal <skye.viau@gmail.com>}
  */
+
 class Discord {
 
+    /**
+     * DiscordRPC Instance Object
+     */
+
     static DiscordRPC discordLib = DiscordRPC.INSTANCE;
-    static String applicationId = "630462473765650469";
+
+    /**
+     * Discord Application ID
+     */
+
+    private static String applicationId = "630462473765650469";
 
     /**
      * Starts the Discord connection

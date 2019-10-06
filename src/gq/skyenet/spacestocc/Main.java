@@ -17,6 +17,13 @@ import java.util.Scanner;
  */
 
 public class Main {
+
+    /**
+     * Main method for SpaceStocc
+     * @param args Input arguments
+     * @throws Throwable Any errors that occur while running
+     */
+
     public static void main(String[] args) throws Throwable {
         Scanner input = new Scanner(System.in);
 
