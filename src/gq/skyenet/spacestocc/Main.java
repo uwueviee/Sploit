@@ -20,6 +20,9 @@ public class Main {
     public static void main(String[] args) throws Throwable {
         Scanner input = new Scanner(System.in);
 
+        Discord.startDiscord();
+        Discord.changePresence("mainIcon", "SpaceStocc", "", "", "Doing Nothing", "In Main Menu");
+
         Util.clearScreen();
 
         // Start SpaceStocc and get all information required from the online API
@@ -56,5 +59,13 @@ public class Main {
         System.out.println(LocalDateTime.parse(news.getJSONObject(0).get("time").toString()).format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL).withLocale(Locale.CANADA).withZone(ZoneId.of("GMT"))));
         System.out.println("=====");
         System.out.println(news.getJSONObject(0).get("content"));
+
+        for (;;) {
+            String yeet = input.nextLine();
+            if(yeet.equals("pp")) {
+                Util.shutdown(0);
+                break;
+            }
+        }
     }
 }

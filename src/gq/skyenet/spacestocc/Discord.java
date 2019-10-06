@@ -1,5 +1,9 @@
 package gq.skyenet.spacestocc;
 
+import club.minnced.discord.rpc.DiscordEventHandlers;
+import club.minnced.discord.rpc.DiscordRPC;
+import club.minnced.discord.rpc.DiscordRichPresence;
+
 /**
  * Manages the Discord RPC connection
  *
@@ -7,12 +11,24 @@ package gq.skyenet.spacestocc;
  */
 class Discord {
 
+    static DiscordRPC discordLib = DiscordRPC.INSTANCE;
+    static String applicationId = "630462473765650469";
+
     /**
      * Starts the Discord connection
      */
 
     static void startDiscord() {
-
+        DiscordEventHandlers handlers = new DiscordEventHandlers();
+        discordLib.Discord_Initialize(applicationId, handlers, false, null);
+        new Thread(() -> {
+            while (!Thread.currentThread().isInterrupted()) {
+                discordLib.Discord_RunCallbacks();
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException ignored) {}
+            }
+        }, "RPC-Callback-Handler").start();
     }
 
     /**
@@ -27,7 +43,16 @@ class Discord {
      * @see #startDiscord
      */
 
-    static void changePresence(String largeImage, String largeImageText, String smallImage, String smallImageText , String state, String details) {
+    static void changePresence(String largeImage, String largeImageText, String smallImage, String smallImageText, String state, String details) {
+        DiscordRichPresence presence = new DiscordRichPresence();
+        presence.startTimestamp = System.currentTimeMillis() / 1000;
+        presence.details = details;
+        presence.state = state;
+        presence.smallImageKey = smallImage;
+        presence.smallImageText = smallImageText;
+        presence.largeImageKey = largeImage;
+        presence.largeImageText = largeImageText;
 
+        discordLib.Discord_UpdatePresence(presence);
     }
 }

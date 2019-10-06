@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="org.json:json:20190722" level="project" />
+    <orderEntry type="library" name="java-discord-rpc-2.0.1-all" level="project" />
   </component>
 </module>

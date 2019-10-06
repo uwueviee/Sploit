@@ -19,6 +19,7 @@ class Util {
 
     /**
      * Shows an error screen
+     *
      * @param errorType Type of error
      * @param errorLocation Location of error
      * @param otherInformation Any other information (Can be set to null)
@@ -37,6 +38,17 @@ class Util {
             System.out.println("Other information: " + otherInformation);
         }
 
-        System.exit(1);
+        shutdown(1);
+    }
+
+    /**
+     * Safely shuts down SpaceStocc
+     *
+     * @param shutdownCode Error code to report
+     */
+
+    static void shutdown(int shutdownCode) {
+        Discord.discordLib.Discord_Shutdown();
+        System.exit(shutdownCode);
     }
 }

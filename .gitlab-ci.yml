@@ -4,9 +4,7 @@ pages:
   stage: deploy
   script:
     - mkdir public
-    - cp -rp Site public
-    - mkdir public/documentation
-    - cp -rp Documentation public/documentation
+    - cp -rp public public
   artifacts:
     paths:
       - public
