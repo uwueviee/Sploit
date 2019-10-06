@@ -1,10 +1,15 @@
 package gq.skyenet.spacestocc;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 
 /**
  * Networking utilities
@@ -12,17 +17,17 @@ import java.net.URL;
  * @author Skye Viau (PretzelCA) {@literal <skye.viau@gmail.com>}
  */
 
-public class Networking {
+class Networking {
 
     /**
      * Attempts to get information from a URL object
      *
      * @param url URL object to connect to
      * @return URL response
-     * @throws IOException
+     * @throws Throwable Throws exception if URL can't be accessed.
      */
 
-    static String getURl(URL url) throws IOException {
+    static String getURL(URL url) throws Throwable {
         HttpURLConnection urlConnection = null;
 
         StringBuilder content = new StringBuilder();
@@ -60,23 +65,37 @@ public class Networking {
      * Gets current API status
      *
      * @return API status
-     * @throws IOException
+     * @throws Throwable Throws exception if URL can't be accessed.
      */
 
-    static String getAPIStatus() throws IOException {
+    static String getAPIStatus() throws Throwable {
         URL apiStatusURL = new URL("http://localhost:3000/apiStatus");
-        return getURl(apiStatusURL);
+        return getURL(apiStatusURL);
     }
 
     /**
-     * Gets current news from API
+     * Gets current news from an API
      *
-     * @return Current News
-     * @throws IOException
+     * @return Current news in an JSONArray
+     * @throws Throwable Throws exception if URL can't be accessed.
      */
 
-    static String getNews() throws IOException {
+    static JSONArray getNews() throws Throwable {
         URL currentNewsURL = new URL("http://localhost:3000/currentNews");
-        return getURl(currentNewsURL);
+        JSONTokener tokener = new JSONTokener(getURL(currentNewsURL));
+        return new JSONArray(tokener);
+    }
+
+    /**
+     * Gets current stock prices from an API
+     *
+     * @return Current stock prices in a JSONObject
+     * @throws Throwable Throws exception if URL can't be accessed.
+     */
+
+    static JSONObject getStocks() throws Throwable {
+        URL stocksURL = new URL("http://localhost:3000/stocks");
+        JSONTokener tokener = new JSONTokener(getURL(stocksURL));
+        return new JSONObject(tokener);
     }
 }

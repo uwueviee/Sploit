@@ -5,7 +5,7 @@ package gq.skyenet.spacestocc;
  *
  * @author Skye Viau (PretzelCA) {@literal <skye.viau@gmail.com>}
  */
-public class Discord {
+class Discord {
 
     /**
      * Starts the Discord connection
