@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="spacestocc:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/spacestocc_jar</output-path>
+    <root id="root">
+      <element id="archive" name="spacestocc.jar">
+        <element id="module-output" name="spacestocc" />
+      </element>
+    </root>
+  </artifact>
+</component>
