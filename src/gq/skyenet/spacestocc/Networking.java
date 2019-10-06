@@ -6,10 +6,8 @@ import org.json.JSONTokener;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
 
 /**
  * Networking utilities
@@ -66,6 +64,7 @@ class Networking {
      *
      * @return API status
      * @throws Throwable Throws exception if URL can't be accessed.
+     * @see #getURL
      */
 
     static String getAPIStatus() throws Throwable {
@@ -78,6 +77,7 @@ class Networking {
      *
      * @return Current news in an JSONArray
      * @throws Throwable Throws exception if URL can't be accessed.
+     * @see #getURL
      */
 
     static JSONArray getNews() throws Throwable {
@@ -91,6 +91,7 @@ class Networking {
      *
      * @return Current stock prices in a JSONObject
      * @throws Throwable Throws exception if URL can't be accessed.
+     * @see #getURL
      */
 
     static JSONObject getStocks() throws Throwable {

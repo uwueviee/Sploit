@@ -24,6 +24,7 @@ class Discord {
      * @param smallImageText Small image detail
      * @param state User's current status
      * @param details User's current action
+     * @see #startDiscord
      */
 
     static void changePresence(String largeImage, String largeImageText, String smallImage, String smallImageText , String state, String details) {

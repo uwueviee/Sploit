@@ -5,6 +5,7 @@
       <element id="archive" name="spacestocc.jar">
         <element id="module-output" name="spacestocc" />
       </element>
+      <element id="library" level="project" name="org.json:json:20190722" />
     </root>
   </artifact>
 </component>

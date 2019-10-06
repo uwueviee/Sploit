@@ -1,4 +1,4 @@
 # SpaceStocc
 Open source networked space trading game
 
-JavaDoc for methods is located in /Documentation 
+The JavaDoc for the methods in SpaceStocc can be found on the [javadoc site](https://pretzelca.gitlab.io/spacestocc/documentation/) or in the Documentation folder

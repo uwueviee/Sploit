@@ -5,7 +5,7 @@ pages:
   script:
     - mkdir public
     - mkdir public/documentation
-    - cp -rp Documentation public/documenation
+    - cp -rp Documentation public/documentation
   artifacts:
     paths:
       - public
