@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 /**
  * Main runnable class
+ *
+ * @author Skye Viau (PretzelCA) {@literal <skye.viau@gmail.com>}
  */
 
 public class Main {

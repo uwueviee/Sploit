@@ -2,12 +2,14 @@ package gq.skyenet.spacestocc;
 
 /**
  * Misc utilities
+ *
+ * @author Skye Viau (PretzelCA) {@literal <skye.viau@gmail.com>}
  */
 
 class Util {
 
     /**
-     * Flushes the screen
+     * Flushes the screen using an escape code (Will only work on POSIX systems)
      */
 
     static void clearScreen() {
@@ -16,10 +18,10 @@ class Util {
     }
 
     /**
-     * Shows an error screen, otherInformation can be set to null
-     * @param errorType
-     * @param errorLocation
-     * @param otherInformation
+     * Shows an error screen
+     * @param errorType Type of error
+     * @param errorLocation Location of error
+     * @param otherInformation Any other information (Can be set to null)
      */
 
     static void errorScreen(String errorType, String errorLocation, String otherInformation) {

@@ -8,6 +8,8 @@ import java.net.URL;
 
 /**
  * Networking utilities
+ *
+ * @author Skye Viau (PretzelCA) {@literal <skye.viau@gmail.com>}
  */
 
 public class Networking {
@@ -15,7 +17,7 @@ public class Networking {
     /**
      * Attempts to get information from a URL object
      *
-     * @param url
+     * @param url URL object to connect to
      * @return URL response
      * @throws IOException
      */
