@@ -42,7 +42,7 @@ class Util {
     }
 
     /**
-     * Safely shuts down SpaceStocc
+     * Safely shuts down SpaceStocc (Not to be confused with {@link Discord#stopDiscord})
      *
      * @param shutdownCode Error code to report
      */

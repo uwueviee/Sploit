@@ -64,8 +64,12 @@ public class Main {
         System.out.println("Most recent news article: ");
         System.out.println(news.getJSONObject(0).get("title"));
         System.out.println(LocalDateTime.parse(news.getJSONObject(0).get("time").toString()).format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL).withLocale(Locale.CANADA).withZone(ZoneId.of("GMT"))));
-        System.out.println("=====");
+        System.out.println("=============");
         System.out.println(news.getJSONObject(0).get("content"));
+        System.out.println(" ");
+
+        System.out.println("Watchlist:");
+        System.out.println("=============");
 
         for (;;) {
             String yeet = input.nextLine();

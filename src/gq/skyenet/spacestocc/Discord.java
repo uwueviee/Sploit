@@ -26,6 +26,7 @@ class Discord {
 
     /**
      * Starts the Discord connection
+     * @see #changePresence
      */
 
     static void startDiscord() {
@@ -64,5 +65,14 @@ class Discord {
         presence.largeImageText = largeImageText;
 
         discordLib.Discord_UpdatePresence(presence);
+    }
+
+    /**
+     * Shuts down the Discord connection (Not to be confused with {@link Util#shutdown})
+     * @see #startDiscord
+     */
+
+    static void stopDiscord() {
+        discordLib.Discord_Shutdown();
     }
 }
