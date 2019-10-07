@@ -31,7 +31,9 @@ class Util {
         System.out.println("SpaceStocc");
         System.out.println("=============");
         System.out.println(" ");
+
         System.out.println("An error has occurred in the " + errorType + " method, error location is at " + errorLocation);
+
         System.out.println(" ");
 
         if (otherInformation != null) {
@@ -48,6 +50,14 @@ class Util {
      */
 
     static void shutdown(int shutdownCode) {
+        Util.clearScreen();
+
+        System.out.println("SpaceStocc");
+        System.out.println("=============");
+        System.out.println(" ");
+
+        System.out.println("Goodbye!");
+
         Discord.discordLib.Discord_Shutdown();
         System.exit(shutdownCode);
     }
