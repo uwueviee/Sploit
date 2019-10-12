@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: gq.skyenet.spacestocc.Main
-Class-Path: json-20190722.jar
-

@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact name="sploit:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/sploit_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Sploit.jar">
+        <element id="module-output" name="sploit" />
+      </element>
+      <element id="library" level="project" name="org.json:json:20190722" />
+      <element id="library" level="project" name="java-discord-rpc-2.0.1-all" />
+    </root>
+  </artifact>
+</component>

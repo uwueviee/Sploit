@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"gq.skyenet.spacestocc","l":"Discord"},{"p":"gq.skyenet.spacestocc","l":"Main"},{"p":"gq.skyenet.spacestocc","l":"Networking"},{"p":"gq.skyenet.spacestocc","l":"User"},{"p":"gq.skyenet.spacestocc","l":"Util"}]
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"gq.skyenet.sploit","l":"Discord"},{"p":"gq.skyenet.sploit","l":"Main"},{"p":"gq.skyenet.sploit","l":"Networking"},{"p":"gq.skyenet.sploit","l":"User"},{"p":"gq.skyenet.sploit","l":"Util"}]
