@@ -44,8 +44,8 @@ public class Main {
      */
 
     public static void main(String[] args) throws Throwable {
-        Discord.startDiscord();
-        Discord.changePresence("mainIcon", "SpaceStocc", "", "", "Doing Nothing", "In Main Menu");
+        //Discord.startDiscord();
+        //Discord.changePresence("mainIcon", "SpaceStocc", "", "", "Doing Nothing", "In Main Menu");
 
         Util.clearScreen();
 
@@ -177,6 +177,8 @@ public class Main {
 
         User.createUser(name, pass);
 
+        Util.clearScreen();
+
         System.out.println("SpaceStocc");
         System.out.println("=============");
         System.out.println(" ");
@@ -210,6 +212,13 @@ public class Main {
 
         System.out.println("Watchlist:");
         System.out.println("=============");
+
+        if (userObject.getJSONArray("watchedStocks").length() != 0) {
+            for (int i = 0; i < userObject.getJSONArray("watchedStocks").length(); i++) {
+                System.out.println("$" + userObject.getJSONArray("watchedStocks").getString(i));
+                System.out.println("Price: " + stocks.getString(userObject.getJSONArray("watchedStocks").getString(i)));
+            }
+        }
 
         for (;;) {
             String yeet = input.nextLine();

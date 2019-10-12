@@ -43,8 +43,8 @@ public class User {
     /**
      * Create a new profile for a user
      *
-     * @param name The name of the user
      * @param password The password of the user (Plaintext)
+     * @param name The name of the user
      * @return User profile JSONObject from loadUser, returns null if errored.
      * @see #loadUser
      */
@@ -54,7 +54,7 @@ public class User {
             new File(System.getProperty("user.home") + "/.spacestocc/").mkdirs();
             FileWriter write = new FileWriter((System.getProperty("user.home") + "/.spacestocc/" + name + ".stocc"));
 
-            write.write("{\"name\": \"" + name + "\", \"password\": \"" + password + "\",  \"ownedStocks\":[], \"cashMoney\": \"10000\"}");
+            write.write("{\"name\": \"" + name + "\", \"password\": \"" + password + "\",  \"ownedStocks\":[], \"watchedStocks\":[], \"cashMoney\": \"10000\"}");
             write.close();
 
             return loadUser(name, password);
